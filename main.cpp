@@ -82,8 +82,8 @@ int main (int argc, char *argv[]) {
             if (plik.eof()) {
                 vec.push_back(str);
             }
-            if (vec.size() < 5) {
-                std::cerr << "Niewystarczająca ilość elementów do stworzenia obiektu Rectangle" << std::endl;\
+            if (vec.size() < 4) {
+                std::cerr << "Niewystarczająca ilość elementów do stworzenia obiektu Square" << std::endl;
                 exit(-1);
             }            
             Square S(stoi(vec[0]), stoi(vec[1]), stoi(vec[2]), vec[3][0]);
@@ -100,8 +100,8 @@ int main (int argc, char *argv[]) {
             if (plik.eof()) {
                 vec.push_back(str);
             }
-            if (vec.size() < 5) {
-                std::cerr << "Niewystarczająca ilość elementów do stworzenia obiektu Rectangle" << std::endl;\
+            if (vec.size() < 4) {
+                std::cerr << "Niewystarczająca ilość elementów do stworzenia obiektu Circle" << std::endl;\
                 exit(-1);
             }
             Circle S(stoi(vec[0]), stoi(vec[1]), stoi(vec[2]), vec[3][0]);
@@ -109,7 +109,6 @@ int main (int argc, char *argv[]) {
             vec.clear();
         }
     }
-
 
     std::fstream outputfile;
     outputfile.open(outputfileName, std::ios::out | std::ios::trunc);

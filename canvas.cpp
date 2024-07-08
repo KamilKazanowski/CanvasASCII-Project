@@ -45,10 +45,8 @@ CanvasASCII::CanvasASCII (int w, int h, char c) : Canvas(w, h) {
 CanvasASCII::~CanvasASCII () {
     for(int i = 0; i < height; i++){
         delete [] ptr[i];
-        //std::cout << "DEBUG: wysadzono ptr[i], i = " << i << std::endl;
     }
     delete [] ptr;
-    //std::cout << "DEBUG: wysadzono caly ptr!" << std::endl;
 };
 
 void CanvasASCII::print() {
@@ -76,9 +74,5 @@ bool CanvasASCII::isCanvasMem (int a, int b) {
 }
 
 char CanvasASCII::getCanvasMem (int i, int j) {
-    if (!isCanvasMem(i, j)) {
-        std::cerr << "Argumenty przekazane do funkcji getCanvasMem nie są współrzędnymi elementu tablicy." << std::endl;
-        exit(-1);
-    }
     return ptr[i][j];
 }

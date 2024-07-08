@@ -9,7 +9,6 @@ void Rectangle::draw (CanvasASCII &c) {
         for (int j = 0; j < heigth; j++){
             if (c.isCanvasMem(xCoordinate + i, yCoordinate + j))
                 c.ptr[yCoordinate + j][xCoordinate + i] = member;
-                //std::cout << "DEBUG: wpisano w x: " << xCoordinate + i << ", y: " << yCoordinate + j << std::endl;
         }
     }
 }
