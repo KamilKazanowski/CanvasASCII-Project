@@ -1,0 +1,7 @@
+30 20
+outputfile.txt
+space
+circle 10 12 5 #
+square 24 14 5 &
+rectangle 14 2 10 11 X
+circle 1 3 5 +
